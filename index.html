@@ -13,10 +13,14 @@
 
     <title>UFO Finder</title>
   </head>
+
+
+  <!-- Start of Body-->
   <body>
     
-
+  <!-- Start of Container (wrapper-->
   <div class="wrapper">
+
       <!-- Start of Navbar -->
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">       
@@ -46,24 +50,23 @@
               <div class="filters">
                 <div class="card-body">
                   <h5 class="card-title">Explore</h5>
-                  <form>
-                  <div class="form-group">
-                    <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                        <label for="date"><b>Enter a Date</b>
-                          <p>From: 10/1949 To: 09/2013</p>
-                        </label>
-                        <input class="form-control" id="datetime" type="text" placeholder="2010-10-01">
-                      </li>
-                    </ul>                   
-                  </div>
-                  <button type="button" class="btn btn-secondary" id="filter-btn">Filter Dataset</button>
+                  <form class="ufo-form">
+                    <div class="form-group">
+                      <ul class="list-group" id="filters">
+                        <li class="filter list-group-item">
+                          <label for="date"><b>Enter a Date</b>
+                            <p>From: 10/1949 To: 09/2013</p>
+                          </label>
+                          <input class="form-control" id="datetime" type="text" placeholder="2010-10-01">
+                        </li>
+                      </ul>                   
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="filter-btn">Filter Dataset</button>
                   </form>
                 </div>
               </div>
             </aside>           
-          </div>
-        
+          </div>        
         <!-- End of Filter(s) -->
 
         <!-- Start of Results Table-->
@@ -96,7 +99,7 @@
       </footer>
       <!-- End of Footer -->    
    
-  <!-- End of Wrapper-->
+  <!-- End of Container (wrapper)-->
   </div>
 
 
@@ -109,6 +112,8 @@
     <!-- Link to UFO data file & javascript app file -->
     <script src="static/js/data.js"></script>
     <script src="static/js/app.js"></script>
-
+    
+  <!-- Start of Body-->
   </body>
+
 </html>

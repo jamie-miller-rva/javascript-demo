@@ -114,22 +114,20 @@ body {
 }
 
 /* Adding styles to the aside and filter form */
-.ufo-form {
+.filters {
+  margin-top: 10px;
+}
+
+.filters .card-title {
   margin-top: 50px;
+  text-align: center;
 }
 
 .filters .card-body {
   padding: 0;
 }
 
-.filters {
-  margin-top: 10px;
+.ufo-form {
+  margin-top: 20px;
 }
 
-select {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  color: #8e979f;
-  outline: none;
-}
