@@ -46,13 +46,15 @@ body {
 }
 
 /* This CSS styles the ufo icon in the navbar */
-.nav-ufo {
+.navbar .nav-ufo {
   position: absolute;
   bottom: 5px;
   left: 150px;
   width: 35px;
   color: white;
 }
+
+
 
 /* The styles for the nasa image and animation */
 .hero {
