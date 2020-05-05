@@ -14,22 +14,21 @@
     <title>UFO Finder</title>
   </head>
 
-
+  <!--------------------------------------------------------------------------------------------------------->
   <!-- Start of Body-->
-  <body>
-    
-  <!-- Start of Container (wrapper-->
-  <div class="wrapper">
+  <body>    
+  <!-- Start of Container (wrapper -->
+  <div class="container-lg">
 
       <!-- Start of Navbar -->
-      <nav class="navbar navbar-dark bg-dark">          
+      <nav class="navbar n navbar-expand-lg navbar-dark bg-dark">          
         <a class="navbar-brand" href="index.html"> UFO Sightings
           <!-- The ufo graphic in the navbar is a scalable vector graphic see /www.w3schools.com/graphics/svg_intro.asp-->
-          <img class="nav-ufo" src="static/images/ufo.svg" alt="">
-        </a>          
-          <div class="collapse navbar-collapse" id="navbarText">
+          <img class="nav-ufo" src="static/images/ufo.svg" alt="flying saucer">
+        </a>
+          <div class="collapse navbar-collapse" id="navbarNav">  
             <ul class="navbar-nav">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="https://jamie-miller-rva.github.io/javascript-demo/index.html">Deployed Website<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
@@ -39,8 +38,9 @@
                 <a class="nav-link" href="https://www.kaggle.com/NUFORC/ufo-sightings">Kaggle Dataset</a>
               </li>
             </ul>
-        </div>
-      </nav>    
+          </div>
+      </nav>
+     
       <!-- End of Navbar -->
 
       <!-- Start of main graphic and text; annimation is in the style.css file under .hero -->
@@ -53,14 +53,14 @@
       <!-- End of main graphic and text -->
 
 
-    <div class="container">
+    <div class="container-md">
       <!-- Start of Filter(s) -->
         <div class="row margin-top-50">
           <div class="col-md-2">
             <aside>
               <div class="filters">
                 <div class="card-body">
-                  <h5 class="card-title">Explore</h5>
+                  <h5 class="card-title"><b>Explore</b></h5>
                   <form class="ufo-form">
                     <div class="form-group">
                       <ul class="list-group" id="filters">
@@ -111,8 +111,8 @@
       <!-- End of Footer -->    
    
   <!-- End of Container (wrapper)-->
-  </div>
-
+</div>
+  <!--------------------------------------------------------------------------------------------------------->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
