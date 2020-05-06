@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <!-- Link to latest version of d3 at d3js.org-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
     <!-- Link to style.css file-->
     <link rel="stylesheet" href="static/css/style.css">
 
@@ -39,10 +42,8 @@
               </li>
             </ul>
           </div>
-      </nav>
-     
-      <!-- End of Navbar -->
-
+      </nav>     
+      <!-- End of Navbar -->  
       <!-- Start of main graphic and text; annimation is in the style.css file under .hero -->
       <div class="container">
         <div class="hero text-center">
@@ -52,9 +53,10 @@
       </div>
       <!-- End of main graphic and text -->
 
-
-    <div class="container-md">
-      <!-- Start of Filter(s) -->
+  <!-------------------------------------------------------------------------------------------------------->
+    
+      <div class="container-md">
+        <!-- Start of Filter(s) -->
         <div class="row margin-top-50">
           <div class="col-md-2">
             <aside>
@@ -66,13 +68,29 @@
                       <ul class="list-group" id="filters">
                         <li class="filter list-group-item">
                           <label for="date"><b>Enter a Date</b>
-                            <p>From: 10/1949 To: 09/2013</p>
+                            <p>From: 1/1/2010 To: 1/13/2010</p>
                           </label>
-                          <input class="form-control" id="datetime" type="text" placeholder="2010-10-01">
+                          <input class="form-control" id="datetime" type="text" placeholder="1/10/2010">
+                        </li>
+                        <li class="filter list-group-item">
+                          <label for="city"><b>Enter a City</b></label>
+                          <input class="form-control" id="city" type="text" placeholder="roswell">
+                        </li>
+                        <li class="filter list-group-item">
+                          <label for="state"><b>Enter a State</b></label>
+                          <input class="form-control" id="state" type="text" placeholder="ca">
+                        </li>
+                        <li class="filter list-group-item">
+                          <label for="country"><b>Enter a Country</b></label>
+                          <input class="form-control" id="country" type="text" placeholder="us">
+                        </li>
+                        <li class="filter list-group-item">
+                          <label for="shape"><b>Select a Shape</b></label>
+                          <input class="form-control" id="shape" type="text" placeholder="triangle">
                         </li>
                       </ul>                   
                     </div>
-                    <button type="button" class="btn btn-secondary" id="filter-btn">Filter Dataset</button>
+                    <button type="button" class="btn btn-secondary" id="filter-btn">Reset Filters</button>
                   </form>
                 </div>
               </div>
@@ -101,8 +119,7 @@
           </div>
         <!-- End of Results Table-->
 
-    </div>
-
+      </div>
 
       <!-- Start of Footer -->
       <footer class="footer">
@@ -110,8 +127,8 @@
       </footer>
       <!-- End of Footer -->    
    
-  <!-- End of Container (wrapper)-->
-</div>
+  <!-- End of Body Container -->
+  </div>
   <!--------------------------------------------------------------------------------------------------------->
 
     <!-- Optional JavaScript -->
@@ -124,7 +141,7 @@
     <script src="static/js/data.js"></script>
     <script src="static/js/app.js"></script>
 
-  <!-- Start of Body-->
+  <!-- End of Body-->
   </body>
-
+  
 </html>
