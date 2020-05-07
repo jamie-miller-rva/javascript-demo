@@ -2,15 +2,24 @@
 var tableData = data;
 
 // Use d3.select to select the location for the table in the DOM
+// between <tbody> and </tbody>
 var tbody = d3.select("tbody");
 
-// Create the buildTable function
+//------------------------------------------------------------------------
+// This project will require three functions
+// 1. buildTable function to create an html table
+// 2. updateFilters function to collect the filter inputs made by the user
+// 3. filterTable function to select only those rows that match the filter criteria selected by the user
+// 4. resetFilter function to clear out the "old" filter inputs and reload the complete dataset
+
+// 1. buildTable function to create an html table within the table body (tbody)
 function buildTable(data) {
     // Clear the table of any existing data
     tbody.html("");
 
     // Loop through each object in the data
-    // append a row (tr) and cells (td) for each value (column) in the row
+    // append the tbody with a tr for each row)
+    // append the tdody with a td for each value (column) in the row
     data.forEach((dataRow) => {
 
         // Append a row to the table
@@ -27,9 +36,10 @@ function buildTable(data) {
 }
 
 //---------------------------------------------------------------------------//
-// Collect All the Filters in a Dictionary
+// Use a Dictionary to collect all the key: value combinations of the filters
 var filters = {};
 
+// 2. updateFilters function to collect the filter inputs made by the user
 function updateFilters() {
 
     // Save the element, value and id of the filter(this) that was changed
@@ -37,7 +47,7 @@ function updateFilters() {
     var elementValue = changedElement.property("value");
     var filterId = changedElement.attr("id");
 
-    // If filter value was entered then add that filterId and value to the filters list.
+    // If filter value was entered then add that filterId and value to the filters object.
     // Otherwise clear that filter from the filters object
     if (elementValue) {
         filters[filterId] = elementValue;
@@ -47,10 +57,11 @@ function updateFilters() {
 
     // Call function to apply all filters and rebuild the table
     filterTable();
-    console.log(filters);
+    console.log(filters); // not required but good for testing
 
 }
 
+// 3. filterTable function to select only those rows that match the filter criteria selected by the user
 function filterTable() {
 
     // Set the filteredData to the tableData (from data.js)
@@ -66,6 +77,7 @@ function filterTable() {
     console.log(filteredData);
 }
 
+// 4. resetFilter function to clear out the "old" filter inputs and reload the complete dataset
 function resetFilters() {
     filters = {};
     buildTable(tableData);
@@ -75,7 +87,7 @@ function resetFilters() {
 // Attach an event listener for changes to each filter (since there is no filter button)
 d3.selectAll(".filter").on("change", updateFilters);
 
-// Attach an event listener for the form button "#filter-btn"
+// Attach an event listener for the Reset Filters form button "#filter-btn"
 d3.select("#filter-btn").on("click", resetFilters);
 
 // Build the table using tableData for when the page loads
