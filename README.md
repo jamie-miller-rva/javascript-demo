@@ -1,2 +1,3 @@
 # javascript-demo
-Demo of javascript to create a table (of UFO sightings) based on user interaction (from an html page)
+Demo of javascript (and D3) to create a dynamic webpage that includes a table of UFO sightings filtered by the user
+
